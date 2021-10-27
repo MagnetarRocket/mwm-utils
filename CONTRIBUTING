@@ -1,0 +1,4 @@
+If possible, please avoid using web based user interfaces for communication,
+send git-format-patch(1) patches as an e-mail attachment directly to the
+maintainer (alx@fastestcode.org) instead. This makes the process less time
+consuming and much simpler.
