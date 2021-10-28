@@ -72,12 +72,12 @@ static void message_dialog_cb(Widget,XtPointer,XtPointer);
 static void sig_handler(int);
 static void xt_sigusr1_handler(XtPointer,XtSignalId*);
 static void suspend_cb(Widget,XtPointer,XtPointer);
-#ifndef NO_SESSIONMGR
+/* #ifndef NO_SESSIONMGR
 static void logout_cb(Widget,XtPointer,XtPointer);
 static void lock_cb(Widget,XtPointer,XtPointer);
 static Boolean send_xmsm_cmd(const char *command);
 static int local_x_err_handler(Display*,XErrorEvent*);
-#endif /* NO_SESSIONMGR */
+#endif // NO_SESSIONMGR */
 
 
 struct tb_resources {
@@ -979,10 +979,10 @@ static void menu_command_cb(Widget w,
 	
 }
 
-#ifndef NO_SESSIONMGR
-/*
- * Sends a command message to XmSm. Returns True on success.
- */
+/*#ifndef NO_SESSIONMGR
+//
+// Sends a command message to XmSm. Returns True on success.
+//
 static Boolean send_xmsm_cmd(const char *command)
 {
 	Display *dpy = XtDisplay(wshell);
@@ -1027,11 +1027,11 @@ static Boolean send_xmsm_cmd(const char *command)
 	return False;
 }
 
-/*
- * This is temporarily set in send_xmsm_pid just to catch BadWindow errors
- * originating from a window handle stored on root in MGR_ATOM_NAME by
- * xmsm process that is no longer active
- */
+//
+// This is temporarily set in send_xmsm_pid just to catch BadWindow errors
+// originating from a window handle stored on root in MGR_ATOM_NAME by
+// xmsm process that is no longer active
+//
 static int local_x_err_handler(Display *dpy, XErrorEvent *evt)
 {
 	if(evt->error_code == BadWindow) return 0;
@@ -1071,7 +1071,7 @@ static void logout_cb(Widget w, XtPointer client_data, XtPointer call_data)
 		message_dialog(False, xmsm_cmd_err);
 	}
 }
-#endif /* NO_SESSIONMGR */
+#endif // NO_SESSIONMGR  */
 
 static void sig_handler(int sig)
 {
