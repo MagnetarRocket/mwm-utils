@@ -28,3 +28,5 @@ necessary.
 -
 System shutdown, reboot and suspend commands can be altered at compile time
 only. Edit constants in smconf.h, or override them in CFLAGS if necessary.
+-
+Spolier alert,  session manager has been removed.
