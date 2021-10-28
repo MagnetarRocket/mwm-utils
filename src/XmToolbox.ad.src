@@ -8,7 +8,7 @@ XmToolbox.y: 28
 
 *dateTimeDisplay: True
 *dateTimeFormat: %D %l:%M %p
-*showSuspend: True
+*showSuspend: False
 
 *XmPushButtonGadget.renderTable: menu
 *renderTable.menu.fontType: FONT_IS_XFT
