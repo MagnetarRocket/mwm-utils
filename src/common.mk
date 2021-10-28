@@ -1,6 +1,6 @@
 # Common Makefile part, included by platform specific makefiles
 
-CFLAGS += -DPREFIX='"$(PREFIX)"' -DRCDIR='"$(RCDIR)"' $(INCDIRS)
+CFLAGS += -NoXSM -DPREFIX='"$(PREFIX)"' -DRCDIR='"$(RCDIR)"' $(INCDIRS)
 toolbox_libs =  -lXm -lXt -lX11
 
 
