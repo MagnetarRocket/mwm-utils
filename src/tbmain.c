@@ -1071,7 +1071,7 @@ static void logout_cb(Widget w, XtPointer client_data, XtPointer call_data)
 		message_dialog(False, xmsm_cmd_err);
 	}
 }
-#endif /* NO_SESSIONMGR */
+endif /* NO_SESSIONMGR */
 
 static void sig_handler(int sig)
 {
