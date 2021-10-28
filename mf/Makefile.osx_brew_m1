@@ -1,0 +1,17 @@
+# for macs with homebrew default install locations
+PREFIX = /usr
+MANDIR = $(PREFIX)/share/man
+RCDIR = /etc/X11
+APPLRESDIR = /etc/X11/app-defaults
+
+INCDIRS = -I/opt/homebrew/include
+LIBDIRS = -L/opt/homebrew/lib
+
+CFLAGS += -Wall -DPREFIX='"$(PREFIX)"' $(INCDIRS)
+SYSLIBS = -lcrypt
+
+include common.mf
+
+install: common_install
+
+-include .depend
