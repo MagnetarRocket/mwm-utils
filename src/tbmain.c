@@ -130,7 +130,7 @@ String fallback_res[]={
 #define APP_NAME "xmtoolbox"
 #define RC_NAME	"toolboxrc"
 
-ifndef NO_SESSIONMGR
+#ifndef NO_SESSIONMGR
 Atom xa_xmsm_mgr=None;
 Atom xa_xmsm_pid=None;
 Atom xa_xmsm_cmd=None;
@@ -979,7 +979,7 @@ static void menu_command_cb(Widget w,
 	
 }
 
-ifndef NO_SESSIONMGR
+#ifndef NO_SESSIONMGR
 /*
  * Sends a command message to XmSm. Returns True on success.
  */
@@ -1071,7 +1071,7 @@ static void logout_cb(Widget w, XtPointer client_data, XtPointer call_data)
 		message_dialog(False, xmsm_cmd_err);
 	}
 }
-endif /* NO_SESSIONMGR */
+#endif /* NO_SESSIONMGR */
 
 static void sig_handler(int sig)
 {
