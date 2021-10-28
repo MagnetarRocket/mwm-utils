@@ -2,7 +2,7 @@
 PREFIX = /usr
 MANDIR = $(PREFIX)/share/man
 RCDIR = /etc/X11
-APPLRESDIR = /etc/X11/app-defaults
+APPLRESDIR = /opt/x11/share/x11/app-defaults
 
 INCDIRS = -I/opt/homebrew/include
 LIBDIRS = -L/opt/homebrew/lib
