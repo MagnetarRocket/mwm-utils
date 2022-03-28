@@ -1,0 +1,17 @@
+# for anything with pkgsrc
+PREFIX = /usr
+MANDIR = $(PREFIX)/share/man
+RCDIR = /etc/X11
+APPLRESDIR = /opt/x11/share/x11/app-defaults
+
+INCDIRS = -I/usr/pkg/include 
+LIBDIRS = -L/usr/pkg/lib -Wl,-rpath,/usr/pkg/lib
+
+CFLAGS += -Wall -DPREFIX='"$(PREFIX)"' $(INCDIRS)
+SYSLIBS = -lcrypt
+
+include common.mf
+
+install: common_install
+
+-include .depend
